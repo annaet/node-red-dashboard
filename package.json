@@ -16,8 +16,9 @@
 		{"name": "Joe Pavitt"},
 		{"name": "Nick O'Leary"},
 		{"name": "Dan Cunnington"},
-        {"name": "Laurence Stant"},
-        {"name": "Camille Boissel"}
+    {"name": "Laurence Stant"},
+    {"name": "Camille Boissel"},
+		{"name": "Anna Thomas"}
 	],
 	"license": "Apache-2.0",
 	"repository": {
@@ -42,6 +43,7 @@
       "ui_chart": "nodes/ui_chart.js",
       "ui_audio": "nodes/ui_audio.js",
       "ui_toast": "nodes/ui_toast.js",
+      "ui_video": "nodes/ui_video.js",
       "ui_ui_control": "nodes/ui_ui_control.js",
       "ui_template": "nodes/ui_template.js",
       "ui_link": "nodes/ui_link.js",
@@ -94,6 +96,7 @@
     "sprintf-js": "^1.0.3",
     "streamqueue": "^1.1.1",
     "svg-morpheus": "^0.3.0",
-    "tinycolor2": "^1.4.1"
+    "tinycolor2": "^1.4.1",
+    "videogular": "^2.1.0"
   }
 }

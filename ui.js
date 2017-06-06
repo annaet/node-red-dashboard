@@ -268,13 +268,15 @@ function init(server, app, log, redSettings) {
             log.info("Dashboard using development folder");
             app.use(join(settings.path), serveStatic(path.join(__dirname, "src")));
             var vendor_packages = [
-                'angular', 'angular-sanitize', 'angular-animate', 'angular-aria', 'angular-material', 'angular-touch',
+                'angular', 'angular-sanitize', 'angular-animate',
+                'angular-aria', 'angular-material', 'angular-touch',
                 'angular-material-icons', 'svg-morpheus', 'font-awesome',
                 'sprintf-js',
                 'jquery', 'jquery-ui',
                 'd3', 'raphael', 'justgage',
                 'angular-chart.js', 'chart.js', 'moment',
-                'angularjs-color-picker', 'tinycolor2', 'less'
+                'angularjs-color-picker', 'tinycolor2',
+                'less', 'videogular'
             ];
             vendor_packages.forEach(function (packageName) {
                 app.use(join(settings.path, 'vendor', packageName), serveStatic(path.join(__dirname, 'node_modules', packageName)));

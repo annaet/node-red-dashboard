@@ -1,5 +1,5 @@
 
-var app = angular.module('ui',['ngMaterial', 'ngMdIcons', 'ngSanitize', 'ngTouch', 'sprintf', 'chart.js', 'color.picker']);
+var app = angular.module('ui',['ngMaterial', 'ngMdIcons', 'ngSanitize', 'ngTouch', 'sprintf', 'chart.js', 'color.picker', 'com.2fdevs.videogular']);
 
 var dateFormat = "DD/MM/YYYY";  /// my choice - because I said so.
 
