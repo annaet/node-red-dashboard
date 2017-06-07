@@ -15,22 +15,25 @@ angular.module('ui').directive('uiVideo', ['$timeout', '$sce',
                         tracks: [],
                         theme: "vendor/videogular/dist/themes/default/videogular.css"
                     };
+                    me.video.style = {
+                        height: me.item.videoHeight
+                    };
 
                     if (me.item.value) {
-                      me.video.config.sources.push({
-                        src: $sce.trustAsResourceUrl(me.item.value.src),
-                        type: me.item.value.type
-                      });
+                        me.video.config.sources.push({
+                            src: $sce.trustAsResourceUrl(me.item.value.src),
+                            type: me.item.value.type
+                        });
                     }
 
                     // When new values arrive, update the video source
                     scope.$watch('me.item.value', function (newValue) {
                         if (me.item.value) {
-                          me.video.config.sources = [];
-                          me.video.config.sources.push({
-                            src: $sce.trustAsResourceUrl(me.item.value.src),
-                            type: me.item.value.type
-                          });
+                            me.video.config.sources = [];
+                            me.video.config.sources.push({
+                                src: $sce.trustAsResourceUrl(me.item.value.src),
+                                type: me.item.value.type
+                            });
                         }
                     });
                 }, 0);

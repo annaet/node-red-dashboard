@@ -15,6 +15,7 @@
                 }
             },
             height: {value: 0},
+            videoHeight: {value: 320},
             name: {value: ''},
             label: {value: 'video'},
             format: {value: '{{msg.payload}}'}
@@ -57,6 +58,11 @@
         <input type="hidden" id="node-input-width">
         <input type="hidden" id="node-input-height">
         <button class="editor-button" id="node-input-size"></button>
+    </div>
+    <div class="form-row">
+        <label for="node-input-videoHeight"><i class="fa fa-arrows-v"></i> Height</label>
+        <input type="text" id="node-input-videoHeight">
+        <span>px</span>
     </div>
     <div class="form-row">
         <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>

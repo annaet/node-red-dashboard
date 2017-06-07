@@ -20,7 +20,8 @@ module.exports = function(RED) {
                 label: config.label,
                 order: config.order,
                 width: config.width || group.config.width || 6,
-                height: config.height || 1
+                height: config.height || 1,
+                videoHeight: config.videoHeight
             }
         });
         node.on("close", done);
