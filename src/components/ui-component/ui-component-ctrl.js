@@ -14,21 +14,6 @@ angular.module('ui').controller('uiComponentController', ['$scope', 'UiEvents', 
 
         me.init = function () {
             switch (me.item.type) {
-                case 'video': {
-                    me.video = {};
-                    me.video.config = {
-                        preload: "none",
-                        sources: [],
-                        tracks: [],
-                        theme: "vendor/videogular/dist/themes/default/videogular.css"
-                    };
-                    me.video.config.sources.push({
-                        src: $sce.trustAsResourceUrl(me.item.value.src),
-                        type: me.item.value.type
-                    });
-                    break;
-                }
-
                 case 'button': {
                     me.buttonClick = function () {
                         me.valueChanged(0);
