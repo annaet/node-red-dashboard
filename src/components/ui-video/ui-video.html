@@ -1,8 +1,10 @@
 <div class="videogular-container" ng-style="me.video.style">
-  	<videogular vg-theme="me.video.config.theme">
-    		<vg-media vg-src="me.video.config.sources"
-    				  vg-tracks="me.video.config.tracks"
-    				  vg-native-controls="true">
+    <videogular vg-player-ready="me.video.ready($API)"
+                vg-can-play="me.video.canPlay()"
+                vg-theme="me.video.config.theme">
+        <vg-media vg-src="me.video.config.sources"
+                  vg-tracks="me.video.config.tracks"
+                  vg-native-controls="me.video.config.controls">
     		</vg-media>
   	</videogular>
 </div>

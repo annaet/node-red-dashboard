@@ -16,6 +16,8 @@
             },
             height: {value: 0},
             videoHeight: {value: 320},
+            autoplay: {value: false},
+            controls: {value: true},
             name: {value: ''},
             label: {value: 'video'},
             format: {value: '{{msg.payload}}'}
@@ -65,6 +67,16 @@
         <span>px</span>
     </div>
     <div class="form-row">
+        <label for="node-input-autoplay"></label>
+        <input type="checkbox" id="node-input-autoplay" style="display:inline-block; width:auto; vertical-align:top;">
+        Autoplay video
+    </div>
+    <div class="form-row">
+        <label for="node-input-controls"></label>
+        <input type="checkbox" id="node-input-controls" style="display:inline-block; width:auto; vertical-align:top;">
+        Show controls
+    </div>
+    <div class="form-row">
         <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
         <input type="text" id="node-input-name">
     </div>
@@ -72,9 +84,26 @@
 
 <script type="text/x-red" data-help-name="ui_video">
     <p>Will display an HTML5 video player using <a href="http://www.videogular.com/">Videogular</a>.</p>
-    <p>The <code>msg.payload</code> should be an object with a <code>src</code> and <code>type</code> property. eg.</p>
+    <p>The <code>msg.payload</code> should be an object with these properties:</p>
+    <ul>
+      <li>
+        <code>src</code> (required)
+      </li>
+      <li>
+        <code>type</code> (required)
+      </li>
+      <li>
+        <code>autoplay</code>
+      </li>
+      <li>
+        <code>controls</code>
+      </li>
+    </ul>
+    <p>For example:</p>
     <p><pre>msg.payload = {
     src: "http://static.videogular.com/assets/videos/videogular.mp4",
-    type: "video/mp4"
+    type: "video/mp4",
+    autoplay: true,
+    controls: false
 };</pre></p>
 </script>

@@ -10,7 +10,7 @@ module.exports = function(RED) {
         var tab = RED.nodes.getNode(group.config.tab);
         if (!tab) { return; }
 
-        var done = ui.add({
+        var options = {
             emitOnlyNewValues: false,
             node: node,
             tab: tab,
@@ -21,9 +21,14 @@ module.exports = function(RED) {
                 order: config.order,
                 width: config.width || group.config.width || 6,
                 height: config.height || 1,
-                videoHeight: config.videoHeight
+                videoHeight: config.videoHeight,
+                autoplay: config.autoplay,
+                controls: config.controls
             }
-        });
+        };
+
+        var done = ui.add(options);
+
         node.on("close", done);
     }
     RED.nodes.registerType("ui_video", VideoNode);

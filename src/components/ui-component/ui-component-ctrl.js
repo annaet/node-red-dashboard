@@ -14,6 +14,15 @@ angular.module('ui').controller('uiComponentController', ['$scope', 'UiEvents', 
 
         me.init = function () {
             switch (me.item.type) {
+                case 'video': {
+                    me.video = {};
+                    me.video.API = null;
+                    me.video.ready = function(api) {
+                        me.video.API = api;
+                    }
+                    break;
+                }
+
                 case 'button': {
                     me.buttonClick = function () {
                         me.valueChanged(0);
